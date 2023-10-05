@@ -9,7 +9,7 @@ def page_not_found(error):
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def index():
     return render_template('pages/index.jinja', name="Anthony Bernardo Kamers")
 
 

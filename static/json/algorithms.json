@@ -1,0 +1,226 @@
+{
+  "phe": {
+    "priority": 1,
+    "algorithms": {
+      "textbook-rsa": {
+        "operation1": "x",
+        "qnt1": "*",
+        "main_problem": "factorization",
+        "space": "Z_n"
+      },
+      "goldwasser-micali": {
+        "operation1": "+",
+        "qnt1": "*",
+        "limits": {
+          "n": 2
+        },
+        "main_problem": "quadratic residuosity problem",
+        "space": "Z_2"
+      },
+      "el-gamal": {
+        "operation1": "x",
+        "qnt1": "*",
+        "constant_^": true,
+        "main_problem": "Discrete logarithms",
+        "space": "Z_p"
+      },
+      "el-gamal-additive": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "main_problem": "Discrete logarithms",
+        "space": "g^m"
+      },
+      "el-gamal-elliptic": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "main_problem": "Elliptic Curve Discrete logarithms"
+      },
+      "naccache-stern": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Higher residuosity problem",
+        "space": "Z_n"
+      },
+      "paillier": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Higher residuosity problem",
+        "space": "Z_{n^2}"
+      },
+      "benaloh": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Residuosity problem",
+        "space": "Z_n"
+      },
+      "okamoto-uchiyama": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Factorization + p-Subgroup problem",
+        "space": "Z_n"
+      },
+      "damgard-jurik": {
+        "operation1": "+",
+        "qnt1": "*",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Deciosional Composite Residuosity",
+        "space": "Z_{n^{s+1}}"
+      },
+      "kawachi": {
+        "operation1": "+",
+        "qnt1": "*",
+        "main_problem": "Shortest Vector Problem",
+        "post_quantum": true,
+        "space": "Z_p"
+      }
+    }
+  },
+  "she": {
+    "priority": 2,
+    "algorithms": {
+      "boneh-goh-nissim": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "*",
+        "qnt2": "1",
+        "constant_x": true,
+        "constant_+": true,
+        "main_problem": "Subgroup decision problem",
+        "space": "Z_n"
+      },
+      "sander-young-yung": {
+        "operation1": "*",
+        "qnt1": "*",
+        "operation2": "+",
+        "qnt2": 1,
+        "operation3": "NOT",
+        "qnt3": 1,
+        "main_problem": "Quadratic Residuosity Problem",
+        "space": "Z_2"
+      },
+      "ishai-paskin": {
+        "operation1": "branching programs",
+        "qnt1": "*",
+        "main_problem": "Branching Program Evaluation Problem"
+      },
+      "fellow-koblitz": {
+        "operation1": "x",
+        "qnt1": "*",
+        "operation2": "+",
+        "qnt2": "*",
+        "limits": {
+          "ciphertext": "grows"
+        },
+        "main_problem": "Polly Cracker"
+      },
+
+      "DGHV": {
+        "degree_circuit_function": "d <= (eta - 4 - log(f)) / (rho + 2)",
+        "degree_circuit": "d <= (1554 - log(f)) / (43)",
+        "eta": 1558,
+        "rho": 41,
+        "seclevel": "52",
+        "main_problem": "AGCD - Approximate Greatest Common Divisor",
+        "post_quantum": true,
+        "limits": {
+          "n": 2,
+          "keys": "large",
+          "keys_compressed": "2.5mb",
+          "keys_uncompressed": "12.5gb"
+        }
+      },
+      "BFV": {
+
+      },
+      "smart-vercauteren": {},
+      "GWS": {},
+      "FHEW": {},
+      "TFHE": {},
+      "doroz-sunar": {}
+    }
+  },
+  "lfhe": {
+    "priority": 3,
+    "algorithms": {
+      "BGV": {},
+      "CKKS": {},
+      "TFHE": {},
+      "melchor": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "x",
+        "qnt2": "d",
+        "main_problem": "unique Shortest Vector Problem (uSVP) - lattice",
+        "post_quantum": true
+      },
+      "armknecht-sadeghi": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "x",
+        "qnt2": "t",
+        "main_problem": "Reed-Solomon codes - coding theory",
+        "post_quantum": true
+      },
+      "dowerah-krishnaswamy": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "x",
+        "qnt2": "d",
+        "main_problem": "Multivariate polynomials + LWE",
+        "post_quantum": true
+      },
+      "zhao-wang": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "x",
+        "qnt2": "*",
+        "main_problem": "Elliptic Curves",
+        "limits": {
+          "ciphertext": "grows"
+        }
+      },
+      "kanna-vasudevan": {
+        "operation1": "+",
+        "qnt1": "*",
+        "operation2": "x",
+        "qnt2": "*",
+        "main_problem": "Elliptic Curves",
+        "limits": {
+          "ciphertext": "grows"
+        }
+      }
+    }
+  },
+  "fhe": {
+    "priority": 4,
+    "algorithms": {
+      "DGHV": {},
+      "BGV": {
+        "up": {
+          "standard": true
+        }
+      },
+      "BFV": {
+        "up": {
+          "standard": true
+        }
+      },
+      "smart-vercauteren": {},
+      "GWS": {},
+      "FHEW": {},
+      "TFHE": {},
+      "doroz-sunar": {}
+    }
+  }
+}

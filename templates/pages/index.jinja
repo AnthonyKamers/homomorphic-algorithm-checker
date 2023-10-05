@@ -2,13 +2,13 @@
 {% block title %}Index{% endblock %}
 {% block head %}
     {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/index.css") }}" />
     <script src="{{ url_for('static', filename="js/logic.js") }}"></script>
 {% endblock %}
 {% block content %}
     {{ super() }}
-    {% include 'components/faq.jinja' %}
 
-    <div>
+    <div class="equation">
         <form action="/evaluate" method="POST">
             <label for="equation">Equation</label>
             <input type="text" name="equation" id="equation" />
@@ -16,4 +16,6 @@
             <input type="submit" name="submit" value="Submit" />
         </form>
     </div>
+
+    {% include 'components/faq.jinja' %}
 {% endblock %}
