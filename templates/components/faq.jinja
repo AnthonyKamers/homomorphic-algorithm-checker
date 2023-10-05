@@ -1,0 +1,66 @@
+<div>
+    <details open>
+        <summary>What does this application do?</summary>
+        <p>
+            The aim of this application is to identify the correct algorithm
+            in today's reality for homomorphic encryption (HE) algorithms. In
+            other words, it is not necessary demanded for a user to need Fully
+            Homomorphic Encryption (FHE) schemes, because their key sizes are
+            very large and takes a long time to evaluate simple applications.
+        </p>
+        <p>
+            With that in mind, I believe that for a very large range of applications,
+            we could be using Partially Homomorphic Encryption (PHE) schemes (which
+            performs only operation over ciphertext), Somewhat Homomorphic Encryption (SHE)
+            (which performs two operations over ciphertext, being one unlimited and another
+            limited) or even Leveled Homomorphic Encryption (which performs a limited number
+            over a pre-defined depth).
+        </p>
+        <p>
+            With this application is possible to input a function and, based on the attributes
+            of the same, we will identify what algorithms you could use to perform the equation.
+            The list/table of algorithms recognized are at the end of the page. The application
+            may not be entirely accurate, as it is very difficulty to evaluate the circuits of
+            a complex function/equation, which remains as a open problem in the field.
+        </p>
+    </details>
+    <details>
+        <summary>How to use it?</summary>
+        <p>
+            All you need to do is fulfill the input field below and click the "Evaluate" button.
+            You can fulfill the input field with any equation you want using usual Python notation
+            from the math library. For example, if you want to evaluate the equation "x^2 + 2x + 1",
+            or "sin(x) + log(x)", you can just put it like that.
+        </p>
+    </details>
+    <details>
+        <summary>What algorithms are available and what is calculated to give the answer?</summary>
+        <p>
+            A list/table of all algorithms recognized by this application is right at the end of
+            this page. The application uses the following attributes to identify the algorithms:
+        </p>
+        <ul>
+            <li>The number of operations that can be performed at each algorithm</li>
+            <li>
+                For complex operations, such as sin, logarithm, we give an approximity number of
+                circuits necessary to evaluate, for then, comparing with each algorithm.
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>How is this application made?</summary>
+        <p>
+            This application is an open-source project, submited as BCS degree (Bachelor Computer
+            Science) final project at UFSC - Universidade Federal de Santa Catarina, Brazil.
+            The source code is available at my personal Github account, at the following
+            link:
+            <a href="https://github.com/AnthonyKamers/homomorphic-algorithm-checker" target="_blank">
+                https://github.com/AnthonyKamers/homomorphic-algorithm-checker
+            </a>. It has a MIT license, so you can use it as you wish.
+        </p>
+        <p>
+            The core is done in Python 3.10, using the Flask framework to serve the application.
+            The list of algorithms is a Json with the necessary attributes to perform the evaluation.
+        </p>
+    </details>
+</div>
